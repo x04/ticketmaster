@@ -18,7 +18,6 @@ const config = require("./config");
 
 	await page.addScriptTag({content: `window.wasmbinsrc = "${config.wasmUrl}"`});
 	await page.addScriptTag({url: config.bootstrapUrl});
-
-	await page.evaluate(() => window.pookyCallback());
-	console.log("Cookies have been generated");
+	
+	console.log("Ticket enabled.");
 })();
